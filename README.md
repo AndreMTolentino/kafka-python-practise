@@ -11,13 +11,13 @@ A ideia é começar com cenários mais simples e evoluir a complexidade conforme
 
 I - Receber os dados com Script Python simples e armazena-los dentro do MongoDB
 
-![Kafka Project1](https://user-images.githubusercontent.com/58954954/149647926-aada08ab-f921-4fc9-a6d8-b65debe8729e.png)
+![Kafka Project1](https://user-images.githubusercontent.com/58954954/150896348-b7a7db32-0c2a-48c9-bf3d-f42842b3baf9.png)
 
 II - Receber os dados com o SparkStreaming e salva-los dentro de um arquivo parquet
 
-![Kafka Project2](https://user-images.githubusercontent.com/58954954/149647900-fab30ff9-93ec-4302-9263-b1ec638ab858.png)
+![Kafka Project2](https://user-images.githubusercontent.com/58954954/150896363-7d25bb50-bc3a-4b5b-9709-cc4638847df4.png)
 
-III - Receber os dados com o SparkStreaming e salva-los dentro de um arquivo parquet. Kafka dentro rodando dentro de uma container docker
+III - Receber os dados com o SparkStreaming e salva-los dentro de um arquivo parquet. Kafka rodando dentro de uma container docker
 
 ![Kafka Project3](https://user-images.githubusercontent.com/58954954/150894530-5a01787c-e061-4ed5-bde5-23ebdd875663.png)
 
