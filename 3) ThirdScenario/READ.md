@@ -1,8 +1,8 @@
-# Cenário 2
+# Cenário 3
 
 ## Descrição
 
-Arquivo producer.py é responsável por enviar para o tópico "numptest" a cada 5 segundos. Para a construção dessas mensagens, utiliza a classe Transaction do arquivo producedata.py, que simula uma transação de compra de um e-comerce. Por fim, o arquivo consumer.py é responsável por receber as mensagens do Kafka, construir dataframe spark e salvar dados em um arquivo parquet.
+Arquivo producer.py é responsável por enviar para o tópico "numptest" a cada 5 segundos. Para a construção dessas mensagens, utiliza a classe Transaction do arquivo producedata.py, que simula uma transação de compra de um e-comerce. Por fim, o arquivo consumer.py é responsável por receber as mensagens do Kafka, construir dataframe spark e salvar dados em um arquivo parquet. Apache Kafka está dentro de um container Docker.
 
 
 ## Pré-Requisitos
@@ -14,21 +14,23 @@ Arquivo producer.py é responsável por enviar para o tópico "numptest" a cada 
 
 ## Utilização
 
-Abrir terminal e iniciar Zookeeper
+Iniciar container Kafka utilizando comando docker-compose:
 
 ```bash
-  zookeeper-server-start /usr/local/etc/kafka/zookeeper.properties
+  cd docker 
+  docker-compose up -d
 ```
 
-Abrir um segundo terminal e iniciar Kafka
+Verificar criação de Zookeper e Kafka
 ```bash
-  kafka-server-start /usr/local/etc/kafka/server.properties
+  nc -zv localhost 29092
+  nc -zv localhost 22181
 ```
 
 Subir tópico "numtest" no Kafka 
 
 ```bash
-  kafka-topics --bootstrap-server localhost:9092 --create --topic numtest --partitions 1 --replication-factor 1
+  kafka-topics --bootstrap-server localhost:29092 --create --topic numtest --partitions 1 --replication-factor 1
 ```
 
 Verificar os testes unitários
@@ -52,5 +54,5 @@ Verificar que arquivos estão sendo escritos no banco Parquet. Nesse caso, abrir
 
 ```bash
   pyspark
-  spark.read.parquet("output.parquet").show()
+  spark.read.parquet("outcome").show()
 ```

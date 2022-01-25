@@ -13,4 +13,4 @@ for e in range(1000):
     data = Transaction(e).get_info()
     producer.send('numtest', value=data)
     sleep(5)
-    print("Ok")
+    print(data)

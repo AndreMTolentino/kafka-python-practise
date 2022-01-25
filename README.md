@@ -1,4 +1,4 @@
-# python-kafka-practise
+# kafka-python-practise
 
 Com objetivo de praticar a utilização do serviço de mensageira Apache Kafka, esse projeto foi criado com intenção de simular diferentes cenários de utilização da ferramenta. 
 
@@ -17,10 +17,14 @@ II - Receber os dados com o SparkStreaming e salva-los dentro de um arquivo parq
 
 ![Kafka Project2](https://user-images.githubusercontent.com/58954954/149647900-fab30ff9-93ec-4302-9263-b1ec638ab858.png)
 
-III - Receber e agrupar os dados com o SparkStreaming e reenvia-los para o Kafka
+III - Receber os dados com o SparkStreaming e salva-los dentro de um arquivo parquet. Kafka dentro rodando dentro de uma container docker
 
-![Kafka Project3](https://user-images.githubusercontent.com/58954954/149647937-3ab7b485-58d3-443c-b0fa-fbeb6793b415.png)
+![Kafka Project3](https://user-images.githubusercontent.com/58954954/150894530-5a01787c-e061-4ed5-bde5-23ebdd875663.png)
 
-IV - Receber e agrupar os dados com o SparkStreaming, enriquece-los com uma base relacional e reenvia-los para o Kafka
+IV - Receber e agrupar os dados com o SparkStreaming e reenvia-los para o Kafka
 
-![Kafka Project4](https://user-images.githubusercontent.com/58954954/149647940-b220b6b9-6670-41b5-9fef-12dfbd4c7977.png)
+![Kafka Project4](https://user-images.githubusercontent.com/58954954/150893978-a09184f5-39bf-4a08-b3b7-8864f0fee1fe.png)
+
+V - Receber e agrupar os dados com o SparkStreaming, enriquece-los com uma base relacional e reenvia-los para o Kafka
+
+![Kafka Project5](https://user-images.githubusercontent.com/58954954/150893989-9039d287-ea48-4ff9-ad56-027d804edaf6.png)
